@@ -14,7 +14,17 @@ async function getCarData() {
     const response = await fetch("./cars.json");
     carData = await response.json();
     console.log(carData);
-    drawCarCards(carData);
+    const sortedCarData = carData.sort((a, b) => {
+      if (a.brand.toLowerCase() < b.brand.toLowerCase()) {
+        return -1;
+      }
+      if (a.brand.toLowerCase() > b.brand.toLowerCase()) {
+        return 1;
+      }
+      return 0;
+    });
+    console.log(sortedCarData);
+    drawCarCards(sortedCarData);
   } catch (error) {
     console.error(error);
   }
@@ -31,7 +41,6 @@ function drawCarCards(data) {
     carModel.textContent = itemData.models.join(", ");
     carModel.classList.add("car-model");
 
-    // carBrand.append();
     output.append(carBrand, carModel);
   });
 }

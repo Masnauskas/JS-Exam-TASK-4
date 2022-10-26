@@ -25,14 +25,13 @@
 }
 
 .container h1 {
-  margin-top: 50px;
+  margin: 50px 0 20px 0;
   color: #333;
 }
 
 #output {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
   color: #333;
 }
