@@ -21,6 +21,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 20px;
 }
 
 .container h1 {
@@ -37,4 +38,7 @@
 }
 .car-model {
   margin-bottom: 20px;
+  width: 80%;
+  text-align: center;
+  border-bottom: solid 1px #333;
 }

@@ -26,10 +26,9 @@ function drawCarCards(data) {
   data.forEach((itemData) => {
     const carBrand = document.createElement("h2");
     carBrand.textContent = itemData.brand;
-    carBrand.classList.add("car-brand");
 
     const carModel = document.createElement("div");
-    carModel.textContent = itemData.models;
+    carModel.textContent = itemData.models.join(", ");
     carModel.classList.add("car-model");
 
     // carBrand.append();
